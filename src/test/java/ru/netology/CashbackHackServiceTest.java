@@ -1,11 +1,16 @@
 package ru.netology;
 
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import static org.junit.Assert.assertEquals;
 
-public class CashbackHackServiceTest {
-    @org.junit.Test
-    public void testRemain() {
+
+ class CashbackHackServiceTest {
+
+
+
+    @Test
+     void testRemain() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1000;
         int actual = service.remain(amount);
@@ -13,8 +18,8 @@ public class CashbackHackServiceTest {
         assertEquals(actual, expected);
     }
 
-    @org.junit.Test
-    public void testRemainWithCashback() {
+    @Test
+     void testRemainWithCashback() {
         CashbackHackService service = new CashbackHackService();
         int amount = 900;
         int actual = service.remain(amount);
@@ -22,8 +27,8 @@ public class CashbackHackServiceTest {
         assertEquals(actual, expected);
     }
 
-    @org.junit.Test
-    public void testRemainWithCashbackMoreThousand() {
+    @Test
+    void testRemainWithCashbackMoreThousand() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1001;
         int actual = service.remain(amount);
@@ -31,8 +36,8 @@ public class CashbackHackServiceTest {
         assertEquals(actual, expected);
     }
 
-    @org.junit.Test
-    public void testRemainIfAmountIsZero() {
+    @Test
+    void testRemainIfAmountIsZero() {
         CashbackHackService service = new CashbackHackService();
         int amount = 0;
         int actual = service.remain(amount);
@@ -40,8 +45,8 @@ public class CashbackHackServiceTest {
         assertEquals(actual, expected);
     }
 
-    @org.junit.Test
-    public void testRemainIfAmountIsOne() {
+    @Test
+    void testRemainIfAmountIsOne() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1;
         int actual = service.remain(amount);
@@ -49,8 +54,8 @@ public class CashbackHackServiceTest {
         assertEquals(actual, expected);
     }
 
-    @org.junit.Test
-    public void testRemainIfAmountIsNegative() {
+    @Test
+    void testRemainIfAmountIsNegative() {
         CashbackHackService service = new CashbackHackService();
         int amount = -1;
         int actual = service.remain(amount);
